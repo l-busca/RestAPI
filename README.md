@@ -12,11 +12,12 @@ GET/
 
 your_domain/parkings   : get all the data of the base
 
-your_domain/parkings/8  : the the data with the id 8
+your_domain/parkings/8  : the data with the id 8
 
 POST/
 
 your_domain/parkings
+
 body : 
 {
         "name":"Residence boufflers",
