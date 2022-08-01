@@ -49,14 +49,12 @@ async function lastId() {
 }
 
 function checkPlace(place) {
-	let res = true;
+	let res = false;
 	if (Object.keys(place).length === 3) {
-		if (place.name === undefined || place.type === undefined || place.city=== undefined) {
-			res = false;
+		if (!(place.name === undefined || place.type === undefined || place.city=== undefined)) {
+			res = true;
 		}
-	} else {
-		res = false;
-	}
+	} 
 	return res;
 }
 
