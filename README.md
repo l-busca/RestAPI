@@ -25,5 +25,4 @@ body :
         "city": "NANCY"
 }
 
-you must have 3 fields with name,type and city otherwise the API will return
-a "insertion:false" as result
+you must have 3 fields with name,type and city otherwise the API will return "insertion:false" as result
