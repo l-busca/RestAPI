@@ -44,7 +44,7 @@ async function lastId() {
 	await client.connect();
 	const db = client.db(dbName);
 	const collection = db.collection('place');
-	const findResult = await collection.find().sort({id: -1}).limit(1).toArray();
+	const findResult = await collection.find().project({id:1,_id:0}).sort({id: -1}).limit(1).toArray();
 	return(findResult[0].id);
 }
 
@@ -58,6 +58,6 @@ function checkPlace(place) {
 	return res;
 }
 
-app.listen(80, () => {
+app.listen(3111, () => {
 	    console.log("Rest API using express up")
 })
